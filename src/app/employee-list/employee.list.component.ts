@@ -14,8 +14,8 @@ export class EmployeeListComponent implements OnInit {
   isAdd: boolean=false
   _selectedEmployee: Employee
   employeeList
-  private business = ""
-  private skill = ""
+  business = ""
+  skill = ""
   bsub = false
   bvalid = false
   ssub = false
