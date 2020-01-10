@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<div class="container jumbotran">
+   <div class="row">
+       <div class="col-md-3"></div>
+       <div class="col-sm-12 col-md-6 detail-container">
+           <div class="row">
+               <span class="col-sm-6 col-md-5 text-right"> Name : </span>
+               <b class="col-sm-6 col-md-5 ">{{employee.firstname + " " + employee.lastname}} </b>
+               <span class="col-sm-6 col-md-5 text-right"> Email : </span>
+               <b class="col-sm-6 col-md-5 ">{{employee.email}} </b> 
+               <span class="col-sm-6 col-md-5 text-right"> Business Unit : </span>
+               <b class="col-sm-6 col-md-5 " *ngFor = "let unit of units">
+                   <span *ngIf="unit.id==employee.businessunitid">{{ unit.name }}</span>
+                   
+                </b> 
+           </div>
+       </div>
+       <div class="col-md-3"></div>
+   </div>
+</div>

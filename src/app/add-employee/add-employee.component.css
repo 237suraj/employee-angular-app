@@ -1,0 +1,12 @@
+.add-container{
+    padding: .8em 3em;
+    background: white;
+}
+
+.close{
+    position: absolute;
+    padding: 0 !important;
+    top: -15px;
+    right: -15px;
+    color: red;
+}

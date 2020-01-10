@@ -1,0 +1,15 @@
+.login-form{
+    border: 1px solid #0000006b;
+    padding: 2em;
+    margin: 2em;
+    box-shadow: 2px 2px 7px 3px #7979796b
+}
+
+.error{
+    background-color: #ee3a3acc;
+    color: #ffffff;
+    text-align: center;
+    padding: .3em 1em;
+    border: 1px solid #a7010194;
+    border-radius: 15px;
+}

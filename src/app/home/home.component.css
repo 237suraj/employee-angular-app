@@ -1,0 +1,10 @@
+.text-right{
+    float: right;
+}
+
+.detail-container{
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 9px 3px #0000006a;
+    padding: 2em;
+    margin: 1.5em 2em;
+}

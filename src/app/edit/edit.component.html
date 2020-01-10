@@ -1,0 +1,11 @@
+<form [formGroup] = "editForm" (ngSubmit)="onUpdate()">
+  <div style="float: right; height: 30px;">
+    <button class="btn btn-primary"> Update </button>
+    <button class="btn btn-default"> Cancel </button>
+  </div>
+  <div>
+    <label for="firstname">First Name: </label>
+    <input type="text" formControlName="firstname" class="form-control" [ngClass]="{ 'is-invalid': updated && f.username.errors }"  value="{{selectedEmployee.firstname}}" />
+                        
+  </div>
+</form>

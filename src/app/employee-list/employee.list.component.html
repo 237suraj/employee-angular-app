@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+<div class="container" style="margin-top: 4%">
+    <div class="row" style="height: 80px;">
+        <div class="col-md-1"></div>
+        <div class="col-sm-6 col-md-3">
+            <input type="text" [(ngModel)]="business" class="form-control" 
+            [ngClass]="{ 'is-invalid': bsub && bvalid }">
+            <small *ngIf="bvalid" style="color:red"> *required </small>
+        </div>
+        <div class="col-sm-6 col-md-2">
+            <button class="btn btn-primary" (click)="addBusiness()">Add Business Unit</button>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <input type="text" [(ngModel)]="skill" class="form-control"
+            [ngClass]="{ 'is-invalid': ssub && svalid }">
+            <small *ngIf="svalid" style="color:red"> *required </small>
+        </div>
+        <div class="col-sm-6 col-md-2">
+            <button class="btn btn-info" (click)="addSkill()">Add Skill</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-sm-12 col-md-10">
+            <div class="text-right" style="margin-bottom: 10px;">
+                <button (click)="addNew()" class="btn btn-success fas fa-plus-circle"> Add Employee</button>
+            </div>
+            <table class="table table-bordered table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Employee Email</th>
+                        <th>Business Unit</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let employee of employeeList">
+                        <td>{{employee.firstname+" "+employee.lastname}}</td>
+                        <td>{{employee.email}}</td>
+                        <td>{{employee.businessunitid}}</td>
+                        <td>{{employee.role ? "Admin": "User"}}</td>
+                        <td>{{employee.flag ? "Completed": "Pending"}}</td>
+                        <td>
+                            <i mat-raised-button (click)="confirmDialog(employee)" class="fas fa-trash-alt" style="color: red"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="bg-black-8" *ngIf="isAdd">
+        <div  class="add-popup">
+            <app-add-employee (closePopUp)="close($event)"></app-add-employee>
+        </div>
+    </div>
+</div>
+    

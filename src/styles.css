@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+mat-dialog-container {
+    position: absolute;
+    top: 25%;
+    background: white;
+    height: 150px !important; 
+    max-width: 400px;
+    text-align: center;
+}

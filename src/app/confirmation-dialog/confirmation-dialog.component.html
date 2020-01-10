@@ -1,0 +1,8 @@
+<div mat-dialog-content>
+  <p>{{message}}</p>
+</div>
+  
+<div mat-dialog-actions>
+  <button mat-button (click)="onDismiss()" class="btn btn-warning">No</button>
+  <button mat-raised-button color="primary" (click)="onConfirm()" class="btn btn-success">Yes</button>
+</div>

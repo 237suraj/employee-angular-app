@@ -1,0 +1,26 @@
+.bg-purple{
+    background-color: #a10fa1cc;
+    font-size: 1em;
+}
+
+.bg-purple .nav-link {
+    color: white;
+    padding: .8em;
+}
+
+.bg-purple a.nav-link:hover {
+    background-color: #a10fa19d;
+}
+
+button{
+    padding: 0;
+}
+
+.navbar-expand-lg{
+    padding: 0 !important;
+}
+
+.navbar-brand{
+    margin: 0  2em !important;
+    color: white !important;
+}
